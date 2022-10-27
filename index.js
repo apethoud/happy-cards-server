@@ -20,6 +20,8 @@ app.get("/", (req, res) => {
 
 app.get("/users", db.getUsers);
 
+require("./startup/prod")(app);
+
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}.`);
 });
