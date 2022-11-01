@@ -7,6 +7,7 @@ const PORT = process.env.LOCALHOSTPORT;
 
 require("./startup/routes")(app);
 require("./startup/prod")(app);
+require("./startup/config")();
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}.`);
